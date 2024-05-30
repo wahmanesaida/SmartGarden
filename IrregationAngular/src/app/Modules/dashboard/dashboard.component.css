@@ -1,0 +1,12 @@
+/* dashboard.component.css */
+.charts-container {
+  display: flex;
+  justify-content: space-between; /* Space between the charts */
+  gap: 20px; /* Optional: Add some space between the charts */
+}
+
+.chart {
+  flex: 1; /* Each chart takes up equal space */
+  min-width: 0; /* Prevent overflow */
+  height: 400px; /* Set a fixed height for the charts */
+}

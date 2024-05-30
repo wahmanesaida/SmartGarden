@@ -1,0 +1,91 @@
+
+
+
+<div class="containerForm">
+  <div class="signupForm">
+    <div class="firstPart">
+      <h1>Login</h1>
+      <div class="formFields">
+        <form [formGroup]="loginForm">
+          <input
+            class="text"
+            type="email"
+            name="email"
+            placeholder="Email"
+            formControlName="username"
+          />
+          <div
+            style="color: red"
+            *ngIf="loginForm.controls['username'].errors &&
+          loginForm.controls['username'].invalid &&
+          loginForm.controls['username'].touched"
+          >
+            <div *ngIf="loginForm.controls['username'].errors['required']">
+              Email is required
+            </div>
+            <div *ngIf="loginForm.controls['username'].errors['email']">
+              Invalid Email
+            </div>
+          </div>
+          <div class="password-field ">
+            <input
+              class="text"
+              type="password"
+              name="password"
+              id="typepass"
+              placeholder="Password"
+              formControlName="password"
+              [type]="showPassword ? 'text' : 'password'"
+            />
+            <div
+              style="color: red"
+              *ngIf="loginForm.controls['password'].errors &&
+            loginForm.controls['password'].invalid &&
+            loginForm.controls['password'].touched"
+            >
+              <div *ngIf="loginForm.controls['password'].errors['required']">
+                Password is required
+              </div>
+              <div *ngIf="loginForm.controls['password'].errors['pattern']">
+                Password should contains at least one lowercase letter,
+                one uppercase letter, one digit, one special character, and is at least 8 characters long
+              </div>
+            </div>
+            <!--   <input
+                type="checkbox"
+                id="showPassword"
+                [(ngModel)]="showPassword"
+                (change)="togglePasswordVisibility()"
+              /> -->
+          </div>
+          <button
+            type="submit"
+            value="SIGNUP"
+            [disabled]="loginForm.invalid"
+            (click)="login()"
+            class="button-86"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="secondPart">
+      <h1>Let technology manage your garden's needs, so you can enjoy its tranquility</h1>
+      <img
+        data-v-4f74ca3d=""
+        src="https://www.lesjardinsdangelique.com/wp-content/uploads/2024/03/1710205444_systeme-dirrigation-intelligent-comment-la-technologie-change-le-jardinage.jpg"
+        alt="3D business account PNG, SVG"
+        class="image-preview"
+        style=""
+      />
+
+      <p>
+        Don't have an Account? <a routerLink="/Auth/register"> Register Now!</a>
+      </p>
+    </div>
+  </div>
+</div>
+<app-error-model  [errorMessage]="errorMessage"
+                  [showErrorModal]="showErrorModal"
+                  (tryAgain)="tryAgain()"></app-error-model>

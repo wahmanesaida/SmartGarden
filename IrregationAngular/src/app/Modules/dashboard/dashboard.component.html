@@ -1,0 +1,34 @@
+<br>
+<br>
+<button (click)="logout()" style="border: none; background: none; padding: 0; margin-left: 90%;">
+  <i class="fa fa-sign-out fa-2x" aria-hidden="true" style="color: #AD88C6;"></i>
+</button>
+
+<br>
+<br>
+<br>
+<app-card></app-card>
+<br>
+<br>
+<br>
+<div style="width: 800px; margin-left: 40px">
+<app-barchart-temp></app-barchart-temp>
+</div>
+<div style="width: 800px; margin-left: 400px">
+<app-barchart-humidity></app-barchart-humidity>
+</div>
+<br>
+<br>
+<!-- dashboard.component.html -->
+<div class="charts-container">
+  <div class="chart">
+    <app-piechart-water-level></app-piechart-water-level>
+  </div>
+  <div class="chart">
+    <app-dashed-line-chart></app-dashed-line-chart>
+  </div>
+</div>
+<br>
+<br>
+
+
