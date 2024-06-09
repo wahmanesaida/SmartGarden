@@ -11,9 +11,9 @@ public class IrregationData {
     @Id
     private String id;
     private String date;
-    private float temperature;
+    private float tempreature;
     private float humidity;
-    private float waterLevel;
+    private float water_level;
     private float N;
     private float P;
     private float K;

@@ -12,6 +12,7 @@ import {BarchartHumidityComponent} from "./barchart-humidity/barchart-humidity.c
 import {PiechartWaterLevelComponent} from "./piechart-water-level/piechart-water-level.component";
 import {DashedLineChartComponent} from "./dashed-line-chart/dashed-line-chart.component";
 import {CardComponent} from "./card/card.component";
+import {NgToastModule} from "ng-angular-popup";
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import {CardComponent} from "./card/card.component";
     RouterOutlet,
     CanvasJSAngularChartsModule,
     HttpClientModule,
+    NgToastModule,
   ],
   providers: [DashboardService,
   HttpClient,
